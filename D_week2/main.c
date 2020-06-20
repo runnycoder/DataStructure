@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include "ArrayStack.h"
 #include "PolynomialOperation.h"
 
 int main(int argc, const char * argv[]) {
@@ -35,16 +36,23 @@ int main(int argc, const char * argv[]) {
 //    printLinkList(L);
     
     //多项式操作测试
-    Polynomial p1 = readPoly();
-    printPoly(p1);
-    Polynomial p2 = readPoly();
-    printPoly(p2);
+//    Polynomial p1 = readPoly();
+//    printPoly(p1);
+//    Polynomial p2 = readPoly();
+//    printPoly(p2);
 //    Polynomial p = polyAdd( p1,  p2);
 //    printPoly(p);
-    Polynomial p = polyMultiplication_Violence(p1, p2);
-    printPoly(p);
-
-    p = polyMutiplication_Insert(p1,p2);
-    printPoly(p);
+//    Polynomial p = polyMultiplication_Violence(p1, p2);
+//    printPoly(p);
+//
+//    p = polyMutiplication_Insert(p1,p2);
+//    printPoly(p);
+//    AStack Stack =  CreateAStack(10);
+//    AStackPush(Stack, 1);
+//    AStackPush(Stack, 2);
+//    AStackPush(Stack, 3);
+//    while(!AStackIsEmpty(Stack)){
+//        printf("%d ",AStackPop(Stack));
+//    }
     return 0;
 }

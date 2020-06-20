@@ -10,10 +10,13 @@
 #define ArrayStack_h
 
 #include <stdio.h>
-typedef int  Position;
+#include "BinaryTree.h"
+
+typedef BinaryTree Element;
+//typedef int  Element;
 struct SNode{
-    int *Data;
-    Position Top;
+    Element *Data;
+    int Top;
     int MaxSize;
 };
 typedef struct SNode *AStack;
@@ -21,7 +24,7 @@ typedef struct SNode *AStack;
 AStack CreateAStack(int MaxSize);
 int AStackIsFull(AStack s);
 int AStackIsEmpty(AStack s);
-void AStackPush(AStack s,int x);
-int AStackPop(AStack s);
+void AStackPush(AStack s,Element x);
+Element AStackPop(AStack s);
 
 #endif /* ArrayStack_h */

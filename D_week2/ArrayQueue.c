@@ -10,7 +10,7 @@
 
 AQueue createQueue(int maxSize){
     AQueue q = (AQueue)malloc(sizeof(struct QNode));
-    int *data=(int*)malloc(maxSize*sizeof(int));
+    Element *data=(int*)malloc(maxSize*sizeof(Element));
     q->Data=data;
     q->maxSize=maxSize;
     q->front=q->rear=0;
@@ -26,7 +26,7 @@ int isEmpty(AQueue q){
     return (q->front==q->rear);
 }
 
-int addQueue(AQueue q,int x){
+int addQueue(AQueue q,Element x){
     if(isFull(q)){
         printf("队列已满!\n");
         return 0;
@@ -37,13 +37,13 @@ int addQueue(AQueue q,int x){
     }
 }
 
-int deleteQueue(AQueue q){
+Element deleteQueue(AQueue q){
     if(isEmpty(q)){
         printf("队列已空!\n");
         return -1;
     }else{
-        int x= q->Data[q->front];
         q->front=(q->front+1)%q->maxSize;
+        Element x= q->Data[q->front];
         return x;
     }
 }

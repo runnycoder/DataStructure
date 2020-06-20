@@ -31,7 +31,7 @@ int AStackIsEmpty(AStack s){
 }
 
 
-void AStackPush(AStack s,int x){
+void AStackPush(AStack s,Element x){
     if(AStackIsFull(s)){
         printf("堆栈已满!\n");
     }else{
@@ -39,8 +39,8 @@ void AStackPush(AStack s,int x){
     }
 }
 
-int AStackPop(AStack s){
-    int x = -1;
+Element AStackPop(AStack s){
+    Element x ;
     if(AStackIsEmpty(s)){
         printf("堆栈已空!\n");
     }else{
