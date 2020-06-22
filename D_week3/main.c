@@ -47,11 +47,14 @@ int main(int argc, const char * argv[]) {
 //    LevelorderTraversal(BT);
 
 
-//    AVLTree T = NULL;
-//    for (int i = 1; i<10; i++) {
-//        T = Insert(T, i);
-//    }
-//    LevelOrderTraversal(T);
+    AVLTree T = NULL;
+    for (int i = 1; i<8; i++) {
+        T = Insert(T, i);
+    }
+    LevelOrderTraversal(T);
+    printf("\n");
+    T = Delete(T, 6);
+    LevelOrderTraversal(T);
     
     
     printf("Hello, World!\n");
