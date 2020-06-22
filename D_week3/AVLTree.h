@@ -10,13 +10,23 @@
 #define AVLTree_h
 
 #include <stdio.h>
-typedef struct AVLNode *Position;
-typedef Position AVLTree;
-typedef int Element;
+typedef struct AVLNode *AVLTree;
+//typedef AVLTree Position;
+typedef int ElementType;
 struct AVLNode{
-    Element Data;
+    ElementType Data;
     AVLTree Left;
     AVLTree Right;
     int Height;
 };
+ElementType Max(ElementType A,ElementType B);
+int GetHeight(AVLTree T);
+AVLTree FindMax(AVLTree T);
+AVLTree FindMin(AVLTree T);
+AVLTree SingleLeftRotation(AVLTree A);
+AVLTree SingleRightRotation(AVLTree A);
+AVLTree DoubbleLeftRightRotation(AVLTree A);
+AVLTree DoubbleRightLeftRotation(AVLTree A);
+AVLTree Insert(AVLTree T,ElementType X);
+AVLTree Delete(AVLTree T,ElementType X);
 #endif /* AVLTree_h */
