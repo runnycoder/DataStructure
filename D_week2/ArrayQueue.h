@@ -10,14 +10,16 @@
 #define ArrayQueue_h
 
 #include <stdio.h>
-#include "BinaryTree.h"
+#include "AVLTree.h"
+//#include "BinaryTree.h"
 //typedef int Position;
 //typedef int Element;
-typedef int Position;
-typedef BinaryTree Element;
+typedef int APosition;
+//typedef BinaryTree Element;
+ typedef  AVLTree Element;
 struct QNode{
     Element *Data;
-    Position front,rear;
+    APosition front,rear;
     int maxSize;
 };
 typedef struct QNode* AQueue;
