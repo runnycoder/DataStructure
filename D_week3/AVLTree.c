@@ -9,7 +9,7 @@
 #include "AVLTree.h"
 #include "stdlib.h"
 #include "ArrayQueue.h"
-Element Max(Element A,Element B){
+ElementType Max(ElementType A,ElementType B){
     return A>B?A:B;
 }
 int GetHeight(AVLTree T){
@@ -85,7 +85,7 @@ AVLTree DoubbleRightLeftRotation(AVLTree A){
     
 }
 //平衡二叉树的插入
-AVLTree Insert(AVLTree T,Element X){
+AVLTree Insert(AVLTree T,ElementType X){
     if(!T){//空树
         T = (AVLTree)malloc(sizeof(struct AVLNode));
         T->Data = X;
@@ -93,7 +93,7 @@ AVLTree Insert(AVLTree T,Element X){
         T->Right = NULL;
         T->Height = 0;
     }else if(X<T->Data){
-        T->Left = Insert(T, X);
+        T->Left = Insert(T->Left, X);
         if(GetHeight(T->Left)-GetHeight(T->Right)==2){//左右高度相差2说明不平衡了
             if(X<T->Left->Data){//如果插入点在T元素左边的左边 说明需要左单旋
                 T= SingleRightRotation(T);
@@ -102,7 +102,7 @@ AVLTree Insert(AVLTree T,Element X){
             }
         }
     }else if(X>T->Data){
-        T->Right = Insert(T, X);
+        T->Right = Insert(T->Right, X);
         if(GetHeight(T->Left)-GetHeight(T->Right)==-2){
             if(X>T->Right->Data){
                 T= SingleRightRotation(T);
@@ -123,10 +123,10 @@ AVLTree Insert(AVLTree T,Element X){
  2 要删除的结点有左右子树 包括根结点
  3 要删除的结点只有一个子结点 左或者右
  */
-AVLTree Delete(AVLTree T,Element X){
+AVLTree Delete(AVLTree T,ElementType X){
     AVLTree Temp;
     if(!T){
-        printf("要删除的元素不存在!");
+        printf("要删除的元素不存在!\n");
     }else{
         if(X<T->Data){//要删除的结点在当前结点左边 则递归其左子树
             T->Left = Delete(T->Left,X);
@@ -137,11 +137,11 @@ AVLTree Delete(AVLTree T,Element X){
                 if(GetHeight(T->Left)>GetHeight(T->Right)){//左子树高 删除左边最大的
                     Temp = FindMax(T->Left);
                     T->Data = Temp->Data;
-                    T = Delete(T->Left, Temp->Data);
+                    T ->Left = Delete(T->Left, Temp->Data);
                 }else {//右子树高 删除右边最小的
-                    Temp = FindMin(T);
+                    Temp = FindMin(T->Right);
                     T->Data = Temp->Data;
-                    T=Delete(T->Right, Temp->Data);
+                    T->Right=Delete(T->Right, Temp->Data);
                 }
                
                 
@@ -155,8 +155,8 @@ AVLTree Delete(AVLTree T,Element X){
                 free(Temp);
             }
         }
-        return T;
     }
+     return T;
 }
 
 void LevelOrderTraversal(AVLTree T){
