@@ -10,7 +10,8 @@
 //#include "ArrayList.h"
 //#include "ArrayQueue.h"
 //#include "BinaryTree.h"
-#include "AVLTree.h"
+//#include "AVLTree.h"
+#include "main.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -47,17 +48,21 @@ int main(int argc, const char * argv[]) {
 //    LevelorderTraversal(BT);
 
 
-    AVLTree T = NULL;
-    for (int i = 1; i<8; i++) {
-        T = Insert(T, i);
-    }
-    LevelOrderTraversal(T);
-    printf("\n");
-    T = Delete(T, 6);
-    LevelOrderTraversal(T);
-    
-    
-    printf("Hello, World!\n");
+//    AVLTree T = NULL;
+//    for (int i = 1; i<8; i++) {
+//        T = Insert(T, i);
+//    }
+//    LevelOrderTraversal(T);
+//    printf("\n");
+//    T = Delete(T, 6);
+//    LevelOrderTraversal(T);
+//
+    int H = (int)floor(log2(10));//树的高度
+    int X =  10+1-(int)pow(2,H);//最后一层元素的个数
+    int LastHelfNumber = (int)pow(2,H);
+    int Lx = X<LastHelfNumber?X:LastHelfNumber;
+    int L = (int)pow(2, H-1)-1+Lx;
+    printf("Hello, World!%d\n",L);
     
 }
 

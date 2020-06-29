@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include "BinaryTree.h"
 
-typedef BinaryTree Element;
-//typedef int  Element;
+//typedef BinaryTree Element;
+typedef int  Element;
 struct SNode{
     Element *Data;
     int Top;
