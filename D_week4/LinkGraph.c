@@ -40,18 +40,18 @@ void InsertEdge(LGraph Graph,Edge E){
     Graph->G[E->V2].FirstEdge=NewAdjNode;
 }
 //VertexArray记录下标对应的顶点是否被访问过
-void DFSTraversalOfGraph(LGraph Graph,Vertex V,Vertex* VertexArray){
+void DFSTraversalOfLGraph(LGraph Graph,Vertex V,Vertex* VertexArray){
     PtrToAdjVNode W;
     printf("当前顶点%d已被访问!\n",V);
     VertexArray[V]=1;
     for (W=Graph->G[V].FirstEdge; W; W=W->Next) {
         if(VertexArray[W->AdjV]==0){//如果V的邻接结点W未被访问过
-            DFSTraversalOfGraph(Graph, W->AdjV, VertexArray);
+            DFSTraversalOfLGraph(Graph, W->AdjV, VertexArray);
         }
     }
 }
 //VertexArray记录下标对应的顶点是否被访问过
-void BFSTraversalOfGragh(LGraph Graph,Vertex V,Vertex* VertexArray){
+void BFSTraversalOfLGragh(LGraph Graph,Vertex V,Vertex* VertexArray){
     PtrToAdjVNode W;
     AQueue Q = createQueue(Graph->Nv);//队列前面已经有定义此处不再实现
     printf("当前顶点%d已被访问!\n",V);

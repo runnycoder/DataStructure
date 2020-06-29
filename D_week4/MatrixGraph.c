@@ -51,19 +51,19 @@ MGraph BuildGraph(){
     return Graph;
 }
 //邻接矩阵表示图的遍历(DFS)  VertexArray记录下标对应的顶点是否被访问过
-void DFSTraversalOfGragh(MGraph Graph,Vertex V,Vertex* VertexArray){
+void DFSTraversalOfMGragh(MGraph Graph,Vertex V,Vertex* VertexArray){
 //    Vertex* VertexArray = (Vertex*)malloc(sizeof(Vertex)*Graph->Nv);
     printf("当前顶点%d已被访问!\n",V);
     VertexArray[V]=1;//标记当前顶点已经被访问过
     for (int V2 = 0; V2<Graph->Nv; V2++) {
         if(Graph->G[V][V2]>0&&VertexArray[V2]==0){
-            DFSTraversalOfGragh(Graph,V2,VertexArray);
+            DFSTraversalOfMGragh(Graph,V2,VertexArray);
         }
     }
 }
 
 //邻接矩阵表示图的遍历(BFS) 需要用到队列 VertexArray记录下标对应的顶点是否被访问过
-void BFSTraversalOfGragh(MGraph Graph,Vertex V,Vertex* VertexArray){
+void BFSTraversalOfMGragh(MGraph Graph,Vertex V,Vertex* VertexArray){
     AQueue Q = createQueue(Graph->Nv);//队列前面已经有定义此处不再实现
     printf("当前顶点%d已被访问!\n",V);
     VertexArray[V]=1;//标记当前顶点已经被访问过
