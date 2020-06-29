@@ -13,10 +13,10 @@
 #include "AVLTree.h"
 //#include "BinaryTree.h"
 //typedef int Position;
-//typedef int Element;
+typedef int Element;
 typedef int APosition;
 //typedef BinaryTree Element;
- typedef  AVLTree Element;
+// typedef  AVLTree Element;
 struct QNode{
     Element *Data;
     APosition front,rear;

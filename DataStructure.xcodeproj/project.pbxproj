@@ -9,17 +9,22 @@
 /* Begin PBXBuildFile section */
 		A0233EFA249788D5006D3D49 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A0233EF9249788D5006D3D49 /* main.c */; };
 		A0233F0724978922006D3D49 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A0233F0624978922006D3D49 /* main.c */; };
-		A054A9BC249A11F400051F55 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A054A9BB249A11F400051F55 /* main.c */; };
-		A054A9C2249A135400051F55 /* CrossList.c in Sources */ = {isa = PBXBuildFile; fileRef = A054A9C1249A135400051F55 /* CrossList.c */; };
-		A054A9C5249A149000051F55 /* ArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = A054A9C4249A149000051F55 /* ArrayList.c */; };
-		A054A9C8249A497200051F55 /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = A054A9C7249A497200051F55 /* LinkList.c */; };
-		A0B59345249B17F200DD9577 /* ArrayStack.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B59344249B17F200DD9577 /* ArrayStack.c */; };
-		A0B59348249B3B4100DD9577 /* LinkStack.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B59347249B3B4100DD9577 /* LinkStack.c */; };
+		A02B446F24A39B18000684AF /* NetCollection.h in Sources */ = {isa = PBXBuildFile; fileRef = A05815E224A362F50040CBF3 /* NetCollection.h */; };
+		A05815D324A2FB640040CBF3 /* HeapOperation.c in Sources */ = {isa = PBXBuildFile; fileRef = A05815D224A2FB640040CBF3 /* HeapOperation.c */; };
+		A05815D624A33F670040CBF3 /* HuffmanTree.c in Sources */ = {isa = PBXBuildFile; fileRef = A05815D524A33F670040CBF3 /* HuffmanTree.c */; };
+		A05815DE24A35E200040CBF3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A05815DD24A35E200040CBF3 /* main.c */; };
+		A05815E424A362F60040CBF3 /* NetCollection.c in Sources */ = {isa = PBXBuildFile; fileRef = A05815E324A362F50040CBF3 /* NetCollection.c */; };
+		A08375C924A0ECF100E5159A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A054A9BB249A11F400051F55 /* main.c */; };
+		A08375CC24A0F82E00E5159A /* BinaryIsomorphismTree.c in Sources */ = {isa = PBXBuildFile; fileRef = A08375CB24A0F82E00E5159A /* BinaryIsomorphismTree.c */; };
+		A09FF8A024A0C15900CAEE49 /* AVLTree.h in Sources */ = {isa = PBXBuildFile; fileRef = A0A21922249F9DFB001A5329 /* AVLTree.h */; };
+		A0A21924249F9DFB001A5329 /* AVLTree.c in Sources */ = {isa = PBXBuildFile; fileRef = A0A21923249F9DFB001A5329 /* AVLTree.c */; };
 		A0B5934B249B42C300DD9577 /* ArrayQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B5934A249B42C300DD9577 /* ArrayQueue.c */; };
-		A0B59353249B49D400DD9577 /* LinkQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B59352249B49D400DD9577 /* LinkQueue.c */; };
-		A0B59356249B4EF900DD9577 /* PolynomialOperation.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B59355249B4EF900DD9577 /* PolynomialOperation.c */; };
+		A0CBF77724A89B10004B546C /* MatrixGraph.c in Sources */ = {isa = PBXBuildFile; fileRef = A0CBF77624A89B10004B546C /* MatrixGraph.c */; };
+		A0CBF77824A8A1A6004B546C /* MatrixGraph.h in Sources */ = {isa = PBXBuildFile; fileRef = A0CBF77524A89B10004B546C /* MatrixGraph.h */; };
+		A0CBF77B24A8E39D004B546C /* LinkGraph.c in Sources */ = {isa = PBXBuildFile; fileRef = A0CBF77A24A8E39D004B546C /* LinkGraph.c */; };
+		A0F294C624A98E3C004D301E /* ArrayQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = A0B59349249B42C300DD9577 /* ArrayQueue.h */; };
+		A0F294C724A98E3C004D301E /* ArrayQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B5934A249B42C300DD9577 /* ArrayQueue.c */; };
 		A0F7B122249DBF8100882726 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A0F7B121249DBF8100882726 /* main.c */; };
-		A0F7B125249E03C600882726 /* BinaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = A0F7B124249E03C600882726 /* BinaryTree.c */; };
 		A0F7B129249E123B00882726 /* ArrayStack.h in Sources */ = {isa = PBXBuildFile; fileRef = A0B59343249B17F200DD9577 /* ArrayStack.h */; };
 		A0F7B12A249E123B00882726 /* ArrayStack.c in Sources */ = {isa = PBXBuildFile; fileRef = A0B59344249B17F200DD9577 /* ArrayStack.c */; };
 		A0F7B12B249E1D9100882726 /* ArrayQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = A0B59349249B42C300DD9577 /* ArrayQueue.h */; };
@@ -27,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A0F294C424A98CA3004D301E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0233EEE249788D5006D3D49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A054A9B8249A11F400051F55;
+			remoteInfo = D_week2;
+		};
 		A0F7B127249E07B300882726 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0233EEE249788D5006D3D49 /* Project object */;
@@ -64,6 +76,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A05815D924A35E200040CBF3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A0F7B117249DBED600882726 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +109,20 @@
 		A054A9C4249A149000051F55 /* ArrayList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayList.c; sourceTree = "<group>"; };
 		A054A9C6249A497200051F55 /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
 		A054A9C7249A497200051F55 /* LinkList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
+		A05815D124A2FB640040CBF3 /* HeapOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapOperation.h; sourceTree = "<group>"; };
+		A05815D224A2FB640040CBF3 /* HeapOperation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HeapOperation.c; sourceTree = "<group>"; };
+		A05815D424A33F670040CBF3 /* HuffmanTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuffmanTree.h; sourceTree = "<group>"; };
+		A05815D524A33F670040CBF3 /* HuffmanTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HuffmanTree.c; sourceTree = "<group>"; };
+		A05815DB24A35E200040CBF3 /* D_week4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = D_week4; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05815DD24A35E200040CBF3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A05815E224A362F50040CBF3 /* NetCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetCollection.h; sourceTree = "<group>"; };
+		A05815E324A362F50040CBF3 /* NetCollection.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = NetCollection.c; sourceTree = "<group>"; };
+		A08375CA24A0F82E00E5159A /* BinaryIsomorphismTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryIsomorphismTree.h; sourceTree = "<group>"; };
+		A08375CB24A0F82E00E5159A /* BinaryIsomorphismTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BinaryIsomorphismTree.c; sourceTree = "<group>"; };
+		A0A2191F249F9379001A5329 /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
+		A0A21920249F9379001A5329 /* BinarySearchTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BinarySearchTree.c; sourceTree = "<group>"; };
+		A0A21922249F9DFB001A5329 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
+		A0A21923249F9DFB001A5329 /* AVLTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AVLTree.c; sourceTree = "<group>"; };
 		A0B59343249B17F200DD9577 /* ArrayStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayStack.h; sourceTree = "<group>"; };
 		A0B59344249B17F200DD9577 /* ArrayStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ArrayStack.c; sourceTree = "<group>"; };
 		A0B59346249B3B4100DD9577 /* LinkStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkStack.h; sourceTree = "<group>"; };
@@ -98,6 +133,10 @@
 		A0B59352249B49D400DD9577 /* LinkQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkQueue.c; sourceTree = "<group>"; };
 		A0B59354249B4EF900DD9577 /* PolynomialOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolynomialOperation.h; sourceTree = "<group>"; };
 		A0B59355249B4EF900DD9577 /* PolynomialOperation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PolynomialOperation.c; sourceTree = "<group>"; };
+		A0CBF77524A89B10004B546C /* MatrixGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixGraph.h; sourceTree = "<group>"; };
+		A0CBF77624A89B10004B546C /* MatrixGraph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MatrixGraph.c; sourceTree = "<group>"; };
+		A0CBF77924A8E39D004B546C /* LinkGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkGraph.h; sourceTree = "<group>"; };
+		A0CBF77A24A8E39D004B546C /* LinkGraph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkGraph.c; sourceTree = "<group>"; };
 		A0F7B119249DBED600882726 /* D_week3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = D_week3; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F7B121249DBF8100882726 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A0F7B123249E03C600882726 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
@@ -126,6 +165,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A05815D824A35E200040CBF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0F7B116249DBED600882726 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +189,7 @@
 				A0233F0524978922006D3D49 /* D_week1 */,
 				A054A9BA249A11F400051F55 /* D_week2 */,
 				A0F7B11A249DBED600882726 /* D_week3 */,
+				A05815DC24A35E200040CBF3 /* D_week4 */,
 				A0233EF7249788D5006D3D49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,6 +201,7 @@
 				A0233F0424978922006D3D49 /* D_week1 */,
 				A054A9B9249A11F400051F55 /* D_week2 */,
 				A0F7B119249DBED600882726 /* D_week3 */,
+				A05815DB24A35E200040CBF3 /* D_week4 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,12 +246,36 @@
 			path = D_week2;
 			sourceTree = "<group>";
 		};
+		A05815DC24A35E200040CBF3 /* D_week4 */ = {
+			isa = PBXGroup;
+			children = (
+				A05815DD24A35E200040CBF3 /* main.c */,
+				A0CBF77524A89B10004B546C /* MatrixGraph.h */,
+				A0CBF77624A89B10004B546C /* MatrixGraph.c */,
+				A05815E224A362F50040CBF3 /* NetCollection.h */,
+				A05815E324A362F50040CBF3 /* NetCollection.c */,
+				A0CBF77924A8E39D004B546C /* LinkGraph.h */,
+				A0CBF77A24A8E39D004B546C /* LinkGraph.c */,
+			);
+			path = D_week4;
+			sourceTree = "<group>";
+		};
 		A0F7B11A249DBED600882726 /* D_week3 */ = {
 			isa = PBXGroup;
 			children = (
 				A0F7B121249DBF8100882726 /* main.c */,
 				A0F7B123249E03C600882726 /* BinaryTree.h */,
 				A0F7B124249E03C600882726 /* BinaryTree.c */,
+				A0A2191F249F9379001A5329 /* BinarySearchTree.h */,
+				A0A21920249F9379001A5329 /* BinarySearchTree.c */,
+				A0A21922249F9DFB001A5329 /* AVLTree.h */,
+				A0A21923249F9DFB001A5329 /* AVLTree.c */,
+				A08375CA24A0F82E00E5159A /* BinaryIsomorphismTree.h */,
+				A08375CB24A0F82E00E5159A /* BinaryIsomorphismTree.c */,
+				A05815D124A2FB640040CBF3 /* HeapOperation.h */,
+				A05815D224A2FB640040CBF3 /* HeapOperation.c */,
+				A05815D424A33F670040CBF3 /* HuffmanTree.h */,
+				A05815D524A33F670040CBF3 /* HuffmanTree.c */,
 			);
 			path = D_week3;
 			sourceTree = "<group>";
@@ -262,6 +334,24 @@
 			productReference = A054A9B9249A11F400051F55 /* D_week2 */;
 			productType = "com.apple.product-type.tool";
 		};
+		A05815DA24A35E200040CBF3 /* D_week4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A05815DF24A35E200040CBF3 /* Build configuration list for PBXNativeTarget "D_week4" */;
+			buildPhases = (
+				A05815D724A35E200040CBF3 /* Sources */,
+				A05815D824A35E200040CBF3 /* Frameworks */,
+				A05815D924A35E200040CBF3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0F294C524A98CA3004D301E /* PBXTargetDependency */,
+			);
+			name = D_week4;
+			productName = D_week4;
+			productReference = A05815DB24A35E200040CBF3 /* D_week4 */;
+			productType = "com.apple.product-type.tool";
+		};
 		A0F7B118249DBED600882726 /* D_week3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0F7B11D249DBED600882726 /* Build configuration list for PBXNativeTarget "D_week3" */;
@@ -298,6 +388,9 @@
 					A054A9B8249A11F400051F55 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					A05815DA24A35E200040CBF3 = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					A0F7B118249DBED600882726 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -320,6 +413,7 @@
 				A0233F0324978922006D3D49 /* D_week1 */,
 				A054A9B8249A11F400051F55 /* D_week2 */,
 				A0F7B118249DBED600882726 /* D_week3 */,
+				A05815DA24A35E200040CBF3 /* D_week4 */,
 			);
 		};
 /* End PBXProject section */
@@ -345,15 +439,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A054A9C5249A149000051F55 /* ArrayList.c in Sources */,
-				A054A9C8249A497200051F55 /* LinkList.c in Sources */,
-				A0B59356249B4EF900DD9577 /* PolynomialOperation.c in Sources */,
+				A08375C924A0ECF100E5159A /* main.c in Sources */,
 				A0B5934B249B42C300DD9577 /* ArrayQueue.c in Sources */,
-				A0B59348249B3B4100DD9577 /* LinkStack.c in Sources */,
-				A0B59345249B17F200DD9577 /* ArrayStack.c in Sources */,
-				A054A9C2249A135400051F55 /* CrossList.c in Sources */,
-				A054A9BC249A11F400051F55 /* main.c in Sources */,
-				A0B59353249B49D400DD9577 /* LinkQueue.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05815D724A35E200040CBF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F294C624A98E3C004D301E /* ArrayQueue.h in Sources */,
+				A0F294C724A98E3C004D301E /* ArrayQueue.c in Sources */,
+				A0CBF77B24A8E39D004B546C /* LinkGraph.c in Sources */,
+				A0CBF77824A8A1A6004B546C /* MatrixGraph.h in Sources */,
+				A02B446F24A39B18000684AF /* NetCollection.h in Sources */,
+				A0CBF77724A89B10004B546C /* MatrixGraph.c in Sources */,
+				A05815DE24A35E200040CBF3 /* main.c in Sources */,
+				A05815E424A362F60040CBF3 /* NetCollection.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,18 +463,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09FF8A024A0C15900CAEE49 /* AVLTree.h in Sources */,
+				A05815D624A33F670040CBF3 /* HuffmanTree.c in Sources */,
 				A0F7B12B249E1D9100882726 /* ArrayQueue.h in Sources */,
 				A0F7B12C249E1D9100882726 /* ArrayQueue.c in Sources */,
 				A0F7B129249E123B00882726 /* ArrayStack.h in Sources */,
 				A0F7B12A249E123B00882726 /* ArrayStack.c in Sources */,
-				A0F7B125249E03C600882726 /* BinaryTree.c in Sources */,
+				A0A21924249F9DFB001A5329 /* AVLTree.c in Sources */,
 				A0F7B122249DBF8100882726 /* main.c in Sources */,
+				A05815D324A2FB640040CBF3 /* HeapOperation.c in Sources */,
+				A08375CC24A0F82E00E5159A /* BinaryIsomorphismTree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A0F294C524A98CA3004D301E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A054A9B8249A11F400051F55 /* D_week2 */;
+			targetProxy = A0F294C424A98CA3004D301E /* PBXContainerItemProxy */;
+		};
 		A0F7B128249E07B300882726 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A054A9B8249A11F400051F55 /* D_week2 */;
@@ -538,6 +649,22 @@
 			};
 			name = Release;
 		};
+		A05815E024A35E200040CBF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A05815E124A35E200040CBF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A0F7B11E249DBED600882726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -589,6 +716,15 @@
 			buildConfigurations = (
 				A054A9BD249A11F400051F55 /* Debug */,
 				A054A9BE249A11F400051F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A05815DF24A35E200040CBF3 /* Build configuration list for PBXNativeTarget "D_week4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05815E024A35E200040CBF3 /* Debug */,
+				A05815E124A35E200040CBF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
