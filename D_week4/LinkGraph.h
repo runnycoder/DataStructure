@@ -24,18 +24,18 @@ typedef struct Vnode{//头节点定义
     DataType Data;
 }AdjList[MaxVertexNum];
 
-typedef struct GNode* PtrToGNode;
-struct GNode{//图结点定义
+typedef struct LGNode* PtrToLGNode;
+struct LGNode{//图结点定义
     int Nv;//顶点数
     int Ne;//边数
     AdjList G;
 };
-typedef PtrToGNode LGraph;
+typedef PtrToLGNode LGraph;
 
-typedef struct ENode* PtrToENode ;
-struct ENode{//边结点构造
+typedef struct LENode* PtrToLENode ;
+struct LENode{//边结点构造
     Vertex V1,V2;
     WeightType Weight;
 };
-typedef PtrToENode Edge;
+typedef PtrToLENode LEdge;
 #endif /* LinkGraph_h */

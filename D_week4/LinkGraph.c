@@ -13,7 +13,7 @@ LGraph CreateLGraph(int VertexNum){
     LGraph Graph;
     Vertex V;
     
-    Graph = (LGraph)malloc(sizeof(struct GNode));
+    Graph = (LGraph)malloc(sizeof(struct LGNode));
     Graph->Nv=VertexNum;
     Graph->Ne=0;
     
@@ -23,7 +23,7 @@ LGraph CreateLGraph(int VertexNum){
     return Graph;
 }
 
-void InsertEdge(LGraph Graph,Edge E){
+void InsertEdge(LGraph Graph,LEdge E){
     PtrToAdjVNode NewAdjNode;
     
     NewAdjNode = (PtrToAdjVNode)malloc(sizeof(struct AdjVNode));
