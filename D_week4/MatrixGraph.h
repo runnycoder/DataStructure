@@ -30,4 +30,6 @@ struct ENode{//边结点构造
     WeightType Weight;
 };
 typedef PtrToENode Edge;
+MGraph CreateGraph(int VertexNum);
+void MInsertEdge(MGraph Graph,Edge E);
 #endif /* MatrixGraph_h */

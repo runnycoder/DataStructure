@@ -8,7 +8,8 @@
 
 #ifndef GrapShortestPath_h
 #define GrapShortestPath_h
-
+#include "MatrixGraph.h"
 #include <stdio.h>
-
+MGraph BuildMatrixGraphOrderByInput(void);
+void FindTheBestVertexToOtherVertices(MGraph Graph);
 #endif /* GrapShortestPath_h */

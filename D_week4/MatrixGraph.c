@@ -9,6 +9,9 @@
 #include "MatrixGraph.h"
 #include "stdlib.h"
 #include "ArrayQueue.h"
+#ifndef INFINITY 1000
+#define INFINITY 1000
+#endif
 
 //邻接矩阵图初始化
 MGraph CreateGraph(int VertexNum){
@@ -19,16 +22,24 @@ MGraph CreateGraph(int VertexNum){
     Graph->Ne=0;
     for (V=0; V<Graph->Nv; V++) {
         for (W=0; W<Graph->Nv; W++) {
-            Graph->G[V][W]=0;
+            if(V==W){
+                 Graph->G[V][W]=INFINITY;//初始化矩阵的对角线为一个极大的数值
+            }else{
+                 Graph->G[V][W]=0;
+            }
+           
         }
     }
     return Graph;
 }
 //在图中顶点插入边
 void MInsertEdge(MGraph Graph,Edge E){
+//    printf("%d %d %d",E->V1,E->V2,E->Weight);
     Graph->G[E->V1][E->V2]=E->Weight;
     //无向图还需要构造V2->V1的连接
     Graph->G[E->V2][E->V1]=E->Weight;
+    Graph->Ne++;
+    
 }
 
 //完整的图构建
