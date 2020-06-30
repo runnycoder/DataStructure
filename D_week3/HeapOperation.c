@@ -8,8 +8,8 @@
 
 #include "HeapOperation.h"
 #include "stdlib.h"
-#define MAX_DATA 1000;
-#define MIN_DATA -1000;
+#define MAX_DATA 1000
+#define MIN_DATA -1000
 MaxHeap CreateMaxHeap(int MaxSize){
     MaxHeap H = (MaxHeap)malloc(sizeof(struct HNode));
     HElementType * Data = (HElementType *)malloc(sizeof(HElementType)*(MaxSize+1));

@@ -22,3 +22,12 @@ HuffmanTree MakeHuffmanTree(MinHeap H){
     T = MinHeapDelete(H);
     return T;
 }
+
+//计算霍夫曼树的最优化加权路径长度 Depth当前结点的深度
+int CalculateWPL(HuffmanTree T,int Depth){
+    if(!T->Left&&!T->Right){//如果当前结点为叶子结点则返回 Weight*Depth
+        return T->Weight*Depth;
+    }else{//如果不是叶子结点 则递归求左右子树的最优路径 左右子树最优路径之和即为当前霍夫曼树的最优路径
+        return CalculateWPL(T->Left,Depth+1)+CalculateWPL(T->Right,Depth+1);
+    }
+}
