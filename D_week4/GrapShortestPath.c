@@ -67,7 +67,7 @@ int Dijkstra(MGraph Graph,int dist[],int path[],Vertex S){
     Vertex V,W;
      /* 初始化：S的邻接顶点,此处默认邻接矩阵中不存在的边用INFINITY表示 */
     for (V=0; V<Graph->Nv; V++) {
-        dist[V]=Graph->G[S][V];
+        dist[V]=Graph->G[S][V];//s->v距离小于INFINITY说明s,v邻接
         if(dist[V]<INFINITY){//一个不可能为正常顶点的极大数值
             path[V]=S;
         }else{

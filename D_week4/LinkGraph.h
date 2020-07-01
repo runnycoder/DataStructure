@@ -38,4 +38,7 @@ struct LENode{//边结点构造
     WeightType Weight;
 };
 typedef PtrToLENode LEdge;
+
+LGraph CreateLGraph(int VertexNum);
+void InsertEdge(LGraph Graph,LEdge E);
 #endif /* LinkGraph_h */

@@ -9,9 +9,7 @@
 #include "MatrixGraph.h"
 #include "stdlib.h"
 #include "ArrayQueue.h"
-#ifndef INFINITY 1000
-#define INFINITY 1000
-#endif
+
 
 //邻接矩阵图初始化
 MGraph CreateGraph(int VertexNum){

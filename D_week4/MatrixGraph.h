@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #define MAX_VERTEX_NUM 100
+#define INFINITY 1000
+
 
 typedef int WeightType;//图中存储类型
 typedef int DataType;//顶点存储数据信息类型

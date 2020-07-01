@@ -32,12 +32,14 @@ void InsertEdge(LGraph Graph,LEdge E){
     NewAdjNode->Next=Graph->G[E->V1].FirstEdge;
     Graph->G[E->V1].FirstEdge=NewAdjNode;
     
-    //如果是无限图还要插入<V2,V1>
+    //如果是无权图还要插入<V2,V1>
     NewAdjNode = (PtrToAdjVNode)malloc(sizeof(struct AdjVNode));
     NewAdjNode->Weight=E->Weight;
     NewAdjNode->AdjV=E->V1;
     NewAdjNode->Next=Graph->G[E->V2].FirstEdge;
     Graph->G[E->V2].FirstEdge=NewAdjNode;
+    
+    Graph->Ne++;
 }
 //VertexArray记录下标对应的顶点是否被访问过
 void DFSTraversalOfLGraph(LGraph Graph,Vertex V,Vertex* VertexArray){
