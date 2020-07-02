@@ -39,7 +39,7 @@ void InsertEdge(LGraph Graph,LEdge E){
     NewAdjNode->Next=Graph->G[E->V2].FirstEdge;
     Graph->G[E->V2].FirstEdge=NewAdjNode;
     
-    Graph->Ne++;
+//    Graph->Ne++;
 }
 //VertexArray记录下标对应的顶点是否被访问过
 void DFSTraversalOfLGraph(LGraph Graph,Vertex V,Vertex* VertexArray){

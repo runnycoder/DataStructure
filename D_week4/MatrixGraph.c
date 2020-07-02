@@ -36,7 +36,7 @@ void MInsertEdge(MGraph Graph,Edge E){
     Graph->G[E->V1][E->V2]=E->Weight;
     //无向图还需要构造V2->V1的连接
     Graph->G[E->V2][E->V1]=E->Weight;
-    Graph->Ne++;
+//    Graph->Ne++;
     
 }
 
@@ -52,7 +52,7 @@ MGraph BuildGraph(){
     if(Graph->Ne!=0){
         E = (PtrToENode)malloc(sizeof(struct ENode));
         for (int i = 0; i<Graph->Ne; i++) {
-            scanf("%d %d %d",&E->V1,&E->V2,&E->Weight);
+            scanf("%d %d %d %d",&E->V1,&E->V2,&E->Weight->Length,&E->Weight->Cost);
             MInsertEdge(Graph, E);
         }
     }
@@ -80,7 +80,7 @@ void BFSTraversalOfMGragh(MGraph Graph,Vertex V,Vertex* VertexArray){
     while(!isEmpty(Q)){
          V = deleteQueue(Q);
         for (int W=0; W<Graph->Nv; W++) {
-            if(VertexArray[W]==0&&Graph->G[V][W]==1){//如果结点未被访问且为V的邻接顶点
+            if(VertexArray[W]==0&&Graph->G[V][W]->Length<INFINITY){//如果结点未被访问且为V的邻接顶点
                 printf("当前顶点%d已被访问!\n",W);
                 VertexArray[W]=1;
                 addQueue(Q, W);

@@ -12,7 +12,11 @@
 #include <stdio.h>
 typedef int Vertex;
 typedef int WeightType;
+
 typedef int DataType;
+
+
+
 typedef struct AdjVNode* PtrToAdjVNode;
 struct AdjVNode{//链表邻接结点定义
     Vertex AdjV;//邻接点的下标

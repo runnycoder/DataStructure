@@ -13,7 +13,7 @@
 #define ERROR -1
 Vertex FindMinDistVFromMST(MGraph Graph,WeightType dist[]){
     Vertex MinV=0,V;
-    WeightType MinDist = INFINITY;
+    int MinDist = INFINITY;
     for (V=0; V<Graph->Nv; V++) {
         if(dist[V]!=0&&dist[V]<MinDist){//未被收录(dist[V]=0说明顶点已在最小生成树上)切距离最小生成树MST最近的顶点
             MinDist=dist[V];
@@ -30,7 +30,7 @@ Vertex FindMinDistVFromMST(MGraph Graph,WeightType dist[]){
 //Prim算法从一个顶点出发让一个小树长大
 int Prim(MGraph Graph,LGraph MST){
     //将最小生成树保存为邻接表存储的图 返回最小权重和
-    WeightType dist[MAX_VERTEX_NUM],TotalWeight;
+    int dist[MAX_VERTEX_NUM],TotalWeight;
     Vertex Parent[MAX_VERTEX_NUM],V,W;
     int VCount;//收录的顶点数
     LEdge E;//顶点收录进MST时使用
