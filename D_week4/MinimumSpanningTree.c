@@ -38,7 +38,7 @@ int Prim(MGraph Graph,LGraph MST){
     //初始化 默认源顶点的下标为0
     for (V=0; V<Graph->Nv; V++) {
         //这里假设邻接矩阵构成的图不相邻的顶点G[V][W]记录为INFINITY
-        dist[V]=Graph->G[0][V];
+        dist[V]=Graph->G[0][V]->Length;
         Parent[V]=0;
     }
     VCount=0;
@@ -66,9 +66,9 @@ int Prim(MGraph Graph,LGraph MST){
         InsertEdge(MST, E);
         for (W=0; W<Graph->Nv; W++) {
             //如果W未被收录到最小生成树中且为V的邻接顶点
-            if(dist[W]!=0&&Graph->G[V][W]<INFINITY){
-                if(Graph->G[V][W]<dist[W]){
-                    dist[W]=Graph->G[V][W];
+            if(dist[W]!=0&&Graph->G[V][W]->Length<INFINITY){
+                if(Graph->G[V][W]->Length<dist[W]){
+                    dist[W]=Graph->G[V][W]->Length;
                     Parent[W]=V;
                 }
                 

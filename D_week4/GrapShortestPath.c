@@ -11,7 +11,7 @@
 #include "MatrixGraph.h"
 #include "ArrayQueue.h"
 #include "stdlib.h"
-#define INFINITY 10000
+
 #define ERROR -1
 #define OK 1
 
@@ -67,7 +67,7 @@ int Dijkstra(MGraph Graph,int dist[],int path[],Vertex S){
     Vertex V,W;
      /* 初始化：S的邻接顶点,此处默认邻接矩阵中不存在的边用INFINITY表示 */
     for (V=0; V<Graph->Nv; V++) {
-        dist[V]=Graph->G[S][V];//s->v距离小于INFINITY说明s,v邻接
+        dist[V]=Graph->G[S][V]->Length;//s->v距离小于INFINITY说明s,v邻接
         if(dist[V]<INFINITY){//一个不可能为正常顶点的极大数值
             path[V]=S;
         }else{
@@ -93,14 +93,14 @@ int Dijkstra(MGraph Graph,int dist[],int path[],Vertex S){
         collected[V]=1;
         for (W=0; W<Graph->Nv; W++) {//对于图中的每个顶点W
             //如果W未被收录到集合中且为V的邻接顶点
-            if(collected[W]==-1&&Graph->G[V][W]<INFINITY){
+            if(collected[W]==-1&&Graph->G[V][W]->Length<INFINITY){
                 if(Graph->G[V][W]<0){//V->W之间存在负的边 不能正确处理返回错误
                     return ERROR;
                 }
                 
                 //如果收录V能使得dist[W]变小 则更新dist[W]的值
-                if(dist[V]+Graph->G[V][W]<dist[W]){
-                    dist[W]=dist[V]+Graph->G[V][W];
+                if(dist[V]+Graph->G[V][W]->Length<dist[W]){
+                    dist[W]=dist[V]+Graph->G[V][W]->Length;
                     path[W]=V;
                 }
             }
@@ -109,10 +109,10 @@ int Dijkstra(MGraph Graph,int dist[],int path[],Vertex S){
     return OK;
 }
 
-void printfMatix(WeightType G[][MAX_VERTEX_NUM],int N){
+void printfMatix(MWeightType G[][MAX_VERTEX_NUM],int N){
     for (int i = 0; i<N; i++) {
         for (int j = 0; j<N; j++) {
-            printf("%d ",G[i][j]);
+            printf("%d ",G[i][j]->Length);
         }
         printf("\n");
     }
@@ -129,11 +129,11 @@ int Floyd(MGraph Graph,WeightType dist[][MAX_VERTEX_NUM],Vertex path[][MAX_VERTE
     //初始化
     for (i=0; i<Graph->Nv; i++) {
         for (j=0; j<Graph->Nv; j++) {
-            dist[i][j]=Graph->G[i][j];
+            dist[i][j]=Graph->G[i][j]->Length;
             path[i][j]=-1;
         }
     }
-    printfMatix(dist,Graph->Nv);
+    
     
     //相当于在每次i->j中插入顶点k 看是否会让i-j的路径缩短 如果能缩短则更新dist[i][j] 记录path[i][j]=k
     for (k=0; k<Graph->Nv; k++) {
@@ -197,7 +197,7 @@ MGraph BuildMatrixGraphOrderByInput(){
         PtrToENode E = (PtrToENode)malloc(sizeof(struct ENode));
         E->V1=V1;
         E->V2=V2;
-        E->Weight=W;
+        E->Weight->Length=W;
         MInsertEdge(Graph, E);
     }
     
@@ -224,7 +224,7 @@ void FindTheBestVertexToOtherVertices(MGraph Graph){
     
     Vertex Animal;
     Floyd(Graph, Dist, Path);
-    printfMatix(Dist,Graph->Nv);
+    
     MinDist = INFINITY;
     for (int i=0; i<Graph->Nv; i++) {
         MaxDist = FindMaxDist(Dist,i,Graph->Nv);

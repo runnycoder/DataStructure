@@ -21,9 +21,9 @@ MGraph CreateGraph(int VertexNum){
     for (V=0; V<Graph->Nv; V++) {
         for (W=0; W<Graph->Nv; W++) {
             if(V==W){
-                 Graph->G[V][W]=INFINITY;//初始化矩阵的对角线为一个极大的数值
+                 Graph->G[V][W]->Length=INFINITY;//初始化矩阵的对角线为一个极大的数值
             }else{
-                 Graph->G[V][W]=0;
+                 Graph->G[V][W]->Length=0;
             }
            
         }

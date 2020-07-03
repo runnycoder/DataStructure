@@ -7,6 +7,7 @@
 //
 
 #include "ArrayQueue.h"
+#include "stdlib.h"
 
 AQueue createQueue(int maxSize){
     AQueue q = (AQueue)malloc(sizeof(struct QNode));
