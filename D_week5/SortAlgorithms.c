@@ -95,9 +95,9 @@ void selectSort(ElementType S[],int N){
 void maxHeapPercDown(ElementType S[],int P,int N){
     int Parent,Child;
     ElementType X;
-    X=S[p];//取出根结点数值
+    X=S[P];//取出根结点数值
     //由于数组元素是从0开始 堆事完全二叉树的结构 则左子树的坐标为2*Parent+1
-    for (Parent=p; 2*Parent+1<N; Parent=Child) {
+    for (Parent=P; 2*Parent+1<N; Parent=Child) {
         Child=2*Parent+1;
         if(Child!=N-1&&(S[Child]<S[Child+1])){//取左右子树较大的
             Child++;
@@ -121,11 +121,11 @@ void heapSort(ElementType S[],int N){
     int i;
     
     for (i=N/2-1; i>0; i--) {
-        maxHeapPercDown(S, i, N)
+        maxHeapPercDown(S, i, N);
     }
-    for (i=N-1; i>=; i--) {
+    for (i=N-1; i>=0; i--) {
         //将最大堆顶元素 与堆最小值交换 并将数组元素减去1 重新调整为最大堆
-        swap(S[i], S[0]);
+        swap(&S[i], &S[0]);
         maxHeapPercDown(S, 0, i);
     }
 }

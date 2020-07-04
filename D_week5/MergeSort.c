@@ -85,7 +85,7 @@ void RecusiveMergeSort(ElementType A[],int N){
 /// @param Temp 临时数组Temp
 /// @param N 元素个数
 /// @param Lengh 子列长度
-void MergePass(ElementType A[],ElementType Temp,int N,int Lengh){
+void MergePass(ElementType A[],ElementType Temp[],int N,int Lengh){
     
     int i,j;
     for (i=0; i<=N-2*Lengh; i+=2*Lengh) {//此处循环到倒数第二对子列就结束
@@ -95,7 +95,7 @@ void MergePass(ElementType A[],ElementType Temp,int N,int Lengh){
     if(i+Lengh<N){
         Merge(A, Temp, i, i+Lengh+1, N-1);
     }else{
-        for (j=i; j<N; j<++) {
+        for (j=i; j<N; j++) {
             Temp[j]=A[j];
         }
     }
